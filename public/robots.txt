@@ -1,0 +1,5 @@
+# Sree Souram Event Management
+User-agent: *
+Allow: /
+
+Sitemap: https://sreesouram.com/sitemap.xml
