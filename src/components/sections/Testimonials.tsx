@@ -26,7 +26,7 @@ export default function Testimonials() {
   }, [isPaused, next]);
 
   return (
-    <section id="testimonials" className="py-20 md:py-24 lg:py-28 bg-charcoal relative">
+    <section id="testimonials" className="py-20 md:py-24 lg:py-28 bg-[#0B1F3A] relative">
       {/* Subtle decorative element */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-gold/20 to-transparent" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-t from-gold/20 to-transparent" />

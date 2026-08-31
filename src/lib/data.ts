@@ -56,12 +56,12 @@ export const images = {
 
 // --- Navigation Links ---
 export const navLinks = [
-  { label: "Home", href: "#home" },
+
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Gallery", href: "#gallery" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "FAQs", href: "#faq" },
+ 
   { label: "Contact Us", href: "#contact" },
 ];
 

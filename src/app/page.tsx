@@ -19,8 +19,8 @@ export default function Home() {
       <Services />
       <Gallery />
       <Testimonials />
-      <Process />
-      <FaqCta />
+      
+      
       <Contact />
       <Footer />
       <MobileBottomCta />

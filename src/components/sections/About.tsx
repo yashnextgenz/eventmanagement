@@ -20,7 +20,7 @@ export default function About() {
           >
             <div className="relative h-[500px] lg:h-[600px]">
               <Image
-                src={images.about}
+                src="/aboutimage.png"
                 alt="About Sree Souram Event Management"
                 fill
                 className="object-cover"

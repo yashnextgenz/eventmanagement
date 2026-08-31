@@ -6,28 +6,6 @@ import { motion } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useState, useCallback, useEffect } from 'react';
 
-const gridClasses: string[] = [
-  'sm:col-span-2 sm:row-span-2', // 0: large featured
-  '',                                // 1: normal
-  '',                                // 2: normal
-  'sm:row-span-2',                  // 3: tall
-  '',                                // 4: normal
-  '',                                // 5: normal
-  'sm:col-span-2',                  // 6: wide
-  '',                                // 7: normal
-];
-
-const aspectClasses: string[] = [
-  'min-h-[300px] sm:min-h-[400px]', // 0: large featured
-  'aspect-square',                   // 1
-  'aspect-square',                   // 2
-  'min-h-[300px] sm:min-h-[400px]', // 3: tall
-  'aspect-square',                   // 4
-  'aspect-square',                   // 5
-  'aspect-video sm:aspect-[2/1]',   // 6: wide
-  'aspect-square',                   // 7
-];
-
 export default function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -69,8 +47,11 @@ export default function Gallery() {
 
   const currentItem = images.gallery[currentIndex];
 
+  // Take first 8 images for the grid (2 rows of 4)
+  const displayedImages = images.gallery.slice(0, 8);
+
   return (
-    <section id="gallery" className="py-20 md:py-24 lg:py-28 bg-charcoal">
+    <section id="gallery" className="py-20 md:py-24 lg:py-28 bg-[#FAF8F3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center">
@@ -89,25 +70,25 @@ export default function Gallery() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-ivory"
+            className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gold"
           >
             Moments We&apos;ve Brought To Life
           </motion.h2>
         </div>
 
-        {/* Gallery Grid */}
+        {/* Gallery Grid - 2 rows of 4 equal boxes */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
-          {images.gallery.map((item, index) => (
+          {displayedImages.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: index * 0.08 }}
-              className={`relative overflow-hidden rounded-sm cursor-pointer group ${gridClasses[index]}`}
+              className="relative overflow-hidden rounded-sm cursor-pointer group aspect-square"
               onClick={() => openLightbox(index)}
             >
-              <div className={`relative w-full ${aspectClasses[index]}`}>
+              <div className="relative w-full h-full">
                 <Image
                   src={item.src}
                   alt={item.title}
@@ -143,7 +124,7 @@ export default function Gallery() {
         >
           <a
             href="#gallery"
-            className="inline-flex items-center gap-2 text-gold border border-gold/30 px-8 py-3 text-sm uppercase tracking-wider hover:bg-gold hover:text-dark-text transition-all duration-300 rounded-sm"
+            className="inline-flex items-center gap-2 text-[#6B7280] border border-gold/30 px-8 py-3 text-sm uppercase tracking-wider hover:bg-gold hover:text-dark-text transition-all duration-300 rounded-sm"
           >
             VIEW ALL GALLERY
             <ArrowRight size={16} />

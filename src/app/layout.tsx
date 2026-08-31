@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Sree Souram Event Management" }],
   icons: {
     icon: "/logo.svg",
-  },
-  openGraph: {
+    },
+    openGraph: {
     title: "Sree Souram Event Management",
     description:
       "Creating unforgettable experiences. From dream weddings to corporate events.",

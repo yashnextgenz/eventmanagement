@@ -8,16 +8,7 @@ import { heroData, images } from '@/lib/data';
 export default function Hero() {
   return (
     <>
-      <style jsx>{`
-        @keyframes slowZoom {
-          from {
-            transform: scale(1);
-          }
-          to {
-            transform: scale(1.1);
-          }
-        }
-      `}</style>
+  
 
       <section
         id="home"
@@ -26,7 +17,7 @@ export default function Hero() {
         {/* Background Image with Slow Zoom */}
         <div className="absolute inset-0 animate-[slowZoom_20s_ease-in-out_infinite]">
           <Image
-            src={images.hero}
+            src="/hero.png"
             alt="Sree Souram Event Management"
             fill
             className="object-cover"
@@ -36,7 +27,7 @@ export default function Hero() {
         </div>
 
         {/* Dark Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1F3A]/10 via-[#0B1F3A]/80 to-[#0B1F3A]/60" />
 
         {/* Main Content */}
         <div className="relative z-10 flex min-h-screen items-center justify-center">

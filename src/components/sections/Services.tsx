@@ -23,7 +23,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function Services() {
   return (
-    <section id="services" className="bg-charcoal py-20 md:py-24 lg:py-28">
+    <section id="services" className="bg-[#0B1F3A] py-20 md:py-24 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center">

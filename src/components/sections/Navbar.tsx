@@ -66,21 +66,20 @@ export default function Navbar() {
           sticky top-0 z-50 w-full transition-all duration-500 ease-in-out
           ${
             scrolled
-              ? 'bg-charcoal border-b border-[#C9A227]/30 shadow-lg shadow-black/20'
-              : 'bg-transparent'
+              ? 'bg-[#0B1F3A] border-b border-[#C9A227]/30 shadow-lg shadow-black/20'
+              : 'bg-[#0B1F3A]'
           }
         `}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-4">
           {/* ---- Brand ---- */}
-          <a href="#home" className="flex flex-col leading-none">
-            <span className="font-heading text-lg font-bold tracking-wider text-gold md:text-xl">
-              SREE SOURAM
-            </span>
-            <span className="mt-0.5 font-body text-[10px] uppercase tracking-[0.3em] text-ivory/70 md:text-xs">
-              EVENT MANAGEMENT
-            </span>
-          </a>
+     <a href="#home" className="flex items-center">
+  <img
+    src="/logo.jpeg"
+    alt="Sree Souram Event Management"
+    className="h-12 w-auto object-contain md:h-14"
+  />
+</a>
 
           {/* ---- Desktop Nav Links ---- */}
           <ul className="hidden items-center gap-6 lg:gap-8 md:flex">
