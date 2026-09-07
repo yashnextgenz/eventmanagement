@@ -73,19 +73,52 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
+const handleSubmit = async (e: FormEvent) => {
+  e.preventDefault();
 
-    if (!validateForm()) return;
+  if (!validateForm()) return;
 
-    setIsSubmitting(true);
+  setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 2000);
-  };
+  try {
+ const response = await fetch('/api/contact', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(formData),
+});
+    const result = await response.json();
 
+    if (!response.ok) {
+      throw new Error(result.message || 'Failed to send enquiry');
+    }
+
+    setIsSubmitted(true);
+
+    // Optional: clear form after successful submission
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      eventType: '',
+      eventDate: '',
+      guests: '',
+      message: '',
+    });
+
+  } catch (error) {
+    console.error('Submit error:', error);
+
+    alert(
+      error instanceof Error
+        ? error.message
+        : 'Something went wrong. Please try again.'
+    );
+  } finally {
+    setIsSubmitting(false);
+  }
+};
   const contactItems = [
     { icon: Phone, label: 'Phone', value: contactInfo.phone, href: undefined },
     { icon: Mail, label: 'Email', value: contactInfo.email, href: `mailto:${contactInfo.email}` },
