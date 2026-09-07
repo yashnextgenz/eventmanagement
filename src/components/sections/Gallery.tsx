@@ -51,7 +51,7 @@ export default function Gallery() {
   const displayedImages = images.gallery.slice(0, 8);
 
   return (
-    <section id="gallery" className="py-20 md:py-24 lg:py-28 bg-[#FAF8F3]">
+    <section id="gallery" className="py-20 md:py-24 lg:py-28 bg-[#ffe8ee]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center">

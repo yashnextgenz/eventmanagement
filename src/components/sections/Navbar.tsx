@@ -73,11 +73,11 @@ export default function Navbar() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-4">
           {/* ---- Brand ---- */}
-     <a href="#home" className="flex items-center">
+  <a href="#home" className="flex items-center">
   <img
-    src="/logo.jpeg"
+    src="/souram.png"
     alt="Sree Souram Event Management"
-    className="h-12 w-auto object-contain md:h-14"
+    className="h-16 w-auto object-contain md:h-20"
   />
 </a>
 
@@ -109,7 +109,7 @@ export default function Navbar() {
           {/* ---- Right: WhatsApp Button (desktop) + Hamburger ---- */}
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/91XXXXXXXXXX"
+              href="https://wa.me/918921127551"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden items-center gap-2 rounded bg-gold px-4 py-2 font-body text-xs font-semibold uppercase tracking-wider text-dark-text transition-transform duration-300 hover:scale-105 md:inline-flex"

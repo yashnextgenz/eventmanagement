@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Sree Souram Event Management" }],
   icons: {
-    icon: "/logo.svg",
+    icon: "/logo.jpeg",
     },
     openGraph: {
     title: "Sree Souram Event Management",

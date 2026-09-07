@@ -12,42 +12,42 @@ export const images = {
   cta: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c3c5e9374dda.jpg",
   gallery: [
     {
-      src: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c000608c2519.jpg",
+      src: "/1_grand_wedding_ceremony.png",
       title: "Grand Wedding Ceremony",
       category: "Wedding",
     },
     {
-      src: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9664ca863f3c.jpg",
+      src: "/2_wedding_reception.png",
       title: "Wedding Reception",
       category: "Wedding",
     },
     {
-      src: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8c2b9ecb37da.jpg",
+      src: "/3_mandap_decor.png",
       title: "Mandap Decoration",
       category: "Décor",
     },
     {
-      src: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1f592608a1dd.jpg",
+      src: "/4_floral_arrangements.png",
       title: "Floral Arrangements",
       category: "Décor",
     },
     {
-      src: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/07ce76488068.jpg",
+      src: "/5_birthday_celebration.png",
       title: "Birthday Celebration",
       category: "Birthday",
     },
     {
-      src: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/04c9b15ce9fd.jpeg",
+      src: "/6_corporate_conference.png",
       title: "Corporate Conference",
       category: "Corporate",
     },
     {
-      src: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/03a05ee37387.jpg",
+      src: "/7_cinematic_conference.png",
       title: "Cinematic Coverage",
       category: "Photography",
     },
     {
-      src: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/87b8194ce1a7.jpg",
+      src: "/8_luxury_catering.png",
       title: "Luxury Catering",
       category: "Catering",
     },
@@ -224,7 +224,7 @@ export const faqData = [
 
 // --- Contact Information (placeholders) ---
 export const contactInfo = {
-  phone: "+91 XXXXX XXXXX",
+  phone: "+918921127551",
   email: "info@sreesouram.com",
   address: "Hyderabad, Telangana, India",
   whatsapp: "https://wa.me/91XXXXXXXXXX",
